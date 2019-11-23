@@ -205,7 +205,7 @@ bool loginCustomer(){
     }
     bool flag = true;
     while (!feof(loginfile)) {
-        fscanf(loginfile, "%s %s %s %s %d %d\n", loginid, password, fname, lname, age, quantity);
+        fscanf(loginfile, "%s %s %s %s %d %d\n", loginid, password, fname, lname, &age, &quantity);
         if(tempid==loginid && temppass==password){
             flag = false;
             break;
@@ -264,7 +264,7 @@ bool loginSeller(){
     }
     bool flag = true;
     while (!feof(loginfile)) {
-        fscanf(loginfile, "%s %s %s %s %d\n", loginid, password, fname, lname, age);
+        fscanf(loginfile, "%s %s %s %s %d\n", loginid, password, fname, lname, &age);
         if(tempid==loginid && temppass==password){
             flag = false;
             break;
@@ -353,7 +353,7 @@ int main() {
         if(ptr!=NULL){
             medic_name *ptr2 = ptr->medics;
             while(ptr2!=NULL){
-                cout<<ptr->d_name<<" ";
+                cout<<ptr2->name<<" ";
                 ptr2 = ptr2->next;
             }
             cout<<endl;
