@@ -1,2 +1,2 @@
 # pharmacycplusplus
-A c++ project on pharmacy 
+A c++ project on pharmacy management system.
